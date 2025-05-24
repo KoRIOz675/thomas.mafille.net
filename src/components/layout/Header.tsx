@@ -19,16 +19,6 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="#About-Section" className="hover:underline">
-              About Me
-            </a>
-          </li>
-          <li>
-            <a href="#Tech-Section" className="hover:underline">
-              Tech Stack
-            </a>
-          </li>
-          <li>
             <a
               href="https://github.com/KoRIOz675/thomas.mafille.net"
               target="_blank"

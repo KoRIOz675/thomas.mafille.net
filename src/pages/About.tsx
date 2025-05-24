@@ -2,10 +2,7 @@ import AboutProps from '../components/skills';
 
 function About() {
   return (
-    <div
-      id="About-Section"
-      className="mx-auto flex h-full max-w-full flex-col items-center justify-center p-4"
-    >
+    <div className="mx-auto flex h-full max-w-full flex-col items-center justify-center p-4">
       <h1 className="mb-4 text-2xl font-bold">About Me</h1>
       <div className="mb-4 grid h-full max-w-5xl grid-cols-1 gap-4 md:grid-cols-3">
         <div className="row-span-1 mb-2 p-4 text-lg md:col-span-2">
