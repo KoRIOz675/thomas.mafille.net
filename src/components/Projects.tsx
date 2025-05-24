@@ -31,7 +31,7 @@ const Projects: React.FC<ProjectsProps> = ({
   const baseTransitionClasses = 'transition-all duration-500 ease-out';
   const initialClasses = 'opacity-0 translate-y-4 scale-95';
   const visibleClasses = 'opacity-100 translate-y-0 scale-100';
-  const linkImage = <FontAwesomeIcon icon={faUpRightFromSquare} />;
+  const upRightIcon = <FontAwesomeIcon icon={faUpRightFromSquare} />;
 
   return (
     <div
@@ -53,8 +53,16 @@ const Projects: React.FC<ProjectsProps> = ({
         <span className="font-semibold">Dates:</span> {dates}
       </div>
       <div className="mt-4 text-center text-blue-600">
-        <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block hover:underline">
-          {github ? <>View Project on github. {linkImage}</> : <>View Project. {linkImage}</>}
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center hover:underline"
+        >
+          {github ? 'View Project on github.' : 'View Project.'}
+          <span className="ml-1 inline-block transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1">
+            {upRightIcon}
+          </span>
         </a>
       </div>
     </div>
