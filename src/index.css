@@ -4,6 +4,50 @@
   font-family: Questrial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  @keyframes move-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes move-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+    
+  }
+
+  .hover-pause-animation:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-marquee-move-left {
+    animation: move-left 25s linear infinite;
+    display: inline-block;
+  }
+
+  .animate-marquee-move-right {
+    animation: move-right 25s linear infinite;
+    display: inline-block;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee-move-left {
+      animation: none;
+    }
+    .animate-marquee-move-right {
+      animation: none;
+    }
+  }
 }
