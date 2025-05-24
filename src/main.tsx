@@ -8,7 +8,7 @@ import Footer from './components/layout/Footer.tsx';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Header />
-    <main className="container mx-auto p-4">
+    <main className="mx-auto">
       <App />
     </main>
     <Footer />

@@ -1,69 +1,76 @@
 import Projects from '../components/Projects';
 
 function Project() {
+  const projectData = [
+    {
+      name: 'Portfolio Website',
+      description: 'A personal portfolio website showcasing my skills, projects, and experiences.',
+      link: 'https://github.com/KoRIOz675/thomas.mafille.net',
+      image: '/projects/portfolio.svg',
+      technologies: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+      dates: 'February 2024 - Present',
+    },
+    {
+      name: 'Atlas of Worlds',
+      description: 'A web application for managing and visualizing lore and worldbuilding tools for TTRPGs.',
+      link: 'https://github.com/Night-Breeze-Inn/Atlas-of-Worlds',
+      image: '/projects/atlasOfWorlds.svg',
+      technologies: ['React.js', 'Node.js', 'Neo4j', 'Vite', 'TypeScript', 'Express.js', 'JWT', 'Tailwind CSS'],
+      dates: 'May 2025 - Present',
+    },
+    {
+      name: 'NightBreeze Inn',
+      description: 'The official website for the Night Breeze Inn, a group for TTRPG enthusiasts.',
+      link: 'https://night-breeze-inn.github.io',
+      image: '/projects/logoNBI.png',
+      technologies: ['React.js', 'Vite', 'Tailwind CSS', 'TypeScript'],
+      dates: 'May 2025 - Present',
+      github: false,
+    },
+    {
+      name: 'Draconae Project',
+      description: 'A digital companion for creating and managing Dungeons & Dragons 5th Edition characters.',
+      link: 'https://github.com/Night-Breeze-Inn/Draconae-Project',
+      image: '/projects/draconaeProject.svg',
+      technologies: ['Java', 'JavaFX', 'Maven'],
+      dates: 'May 2025 - Present',
+    },
+    {
+      name: 'CBSM.eu',
+      description: "A website for formations on commercial offers' management and customer projects' management.",
+      link: 'https://cbsm.eu',
+      image: '/projects/cbsm.png',
+      technologies: ['HTML5', 'JavaScript', 'CSS3'],
+      dates: 'May 2024 - Present',
+      github: false,
+    },
+    {
+      name: 'Task Manager',
+      description: 'Development of a collaborative task management tool, inspired by the Kanban method.',
+      link: 'https://github.com/KoRIOz675/tache-colaborative',
+      image: '/projects/nekoTaskManager.png',
+      technologies: ['Java', 'JavaFX', 'MySQL'],
+      dates: 'October 2024 - December 2024',
+    },
+  ];
+
   return (
     <div className="mx-auto flex h-full max-w-full flex-col items-center justify-center p-4">
       <h1 className="mb-4 text-2xl font-bold">My Projects</h1>
       <div className="mb-4 grid h-full max-w-5xl grid-cols-1 gap-4 md:grid-cols-3">
-        <Projects
-          name="Portfolio Website"
-          description="A personal portfolio website showcasing my skills, projects, and experiences."
-          link="https://github.com/KoRIOz675/thomas.mafille.net"
-          image="/projects/portfolio.svg"
-          technologies={['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS']}
-          dates="February 2024 - Present"
-        />
-        <Projects
-          name="Atlas of Worlds"
-          description="A web application for managing and visualizing lore and worldbuilding tools for TTRPGs."
-          link="https://github.com/Night-Breeze-Inn/Atlas-of-Worlds"
-          image="/projects/atlasOfWorlds.svg"
-          technologies={[
-            'React.js',
-            'Node.js',
-            'Neo4j',
-            'Vite',
-            'TypeScript',
-            'Express.js',
-            'JWT',
-            'Tailwind CSS',
-          ]}
-          dates="May 2025 - Present"
-        />
-        <Projects
-          name="NightBreeze Inn"
-          description="The official website for the Night Breeze Inn, a group for TTRPG enthusiasts."
-          link="https://night-breeze-inn.github.io"
-          image="/projects/logoNBI.png"
-          technologies={['React.js', 'Vite', 'Tailwind CSS', 'TypeScript']}
-          dates="may 2025 - Present"
-          github={false}
-        />
-        <Projects
-          name="Draconae Project"
-          description="A digital companion for creating and managing Dungeons & Dragons 5th Edition characters."
-          link="https://github.com/Night-Breeze-Inn/Draconae-Project"
-          image="/projects/draconaeProject.svg"
-          technologies={['Java', 'JavaFX', 'Maven']}
-          dates="May 2025 - Present"
-        />
-        <Projects
-          name="CBSM.eu"
-          description="A website for formations on commercial offers' management and customer projects' management."
-          link="https://cbsm.eu"
-          image="/projects/cbsm.png"
-          technologies={['HTML5', 'JavaScript', 'CSS3']}
-          dates="May 2024 - Present"
-          github={false}
-        />
-        <Projects
-          name="Task Manager"
-          description="Development of a collaborative task management tool, inspired by the Kanban method."
-          link="https://github.com/KoRIOz675/tache-colaborative"
-          image="/projects/nekoTaskManager.png"
-          technologies={['Java', 'JavaFX', 'MySQL']}
-          dates="October 2024 - December 2024"
-        />
+        {projectData.map((project, idx) => (
+          <Projects
+            key={project.name}
+            name={project.name}
+            description={project.description}
+            link={project.link}
+            image={project.image}
+            technologies={project.technologies}
+            dates={project.dates}
+            github={project.github}
+            index={idx}
+          />
+        ))}
       </div>
     </div>
   );
