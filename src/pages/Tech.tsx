@@ -31,6 +31,9 @@ function Tech() {
               'MySQL',
               'Neo4j',
               'Markdown',
+              'PyGame',
+              'JavaFX',
+              'Maven',
             ]}
             classAnimation="animate-marquee-move-left"
           />
