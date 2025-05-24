@@ -14,7 +14,7 @@ function Project() {
       name: 'Atlas of Worlds',
       description: 'A web application for managing and visualizing lore and worldbuilding tools for TTRPGs.',
       link: 'https://github.com/Night-Breeze-Inn/Atlas-of-Worlds',
-      image: '/projects/atlasOfWorlds.svg',
+      image: '/projects/atlasOfWorlds.png',
       technologies: ['React.js', 'Node.js', 'Neo4j', 'Vite', 'TypeScript', 'Express.js', 'JWT', 'Tailwind CSS'],
       dates: 'May 2025 - Present',
     },

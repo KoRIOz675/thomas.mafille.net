@@ -4,12 +4,12 @@ import useInView from '../hooks/useInView';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
-interface skillItemProps {
+interface SkillItemProps {
   skill: string;
   index: number;
 }
 
-const SkillItem: React.FC<skillItemProps> = ({ skill, index }) => {
+const SkillItem: React.FC<SkillItemProps> = ({ skill, index }) => {
   const [itemRef, isItemInView] = useInView<HTMLLIElement>({
     triggerOnce: true,
     threshold: 0.1,
@@ -55,9 +55,7 @@ const About: React.FC<AboutProps> = ({ skills }) => {
   return (
     <ul className="list-outside space-y-2 pl-4 text-sm text-gray-700">
       {skills.map((skill, index) => (
-        <li key={index} className="flex items-center">
-          <SkillItem skill={skill} index={index} />
-        </li>
+        <SkillItem key={index} skill={skill} index={index} />
       ))}
     </ul>
   );
