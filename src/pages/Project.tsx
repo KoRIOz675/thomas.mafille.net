@@ -3,12 +3,12 @@ import Projects from '../components/Projects';
 function Project() {
   const projectData = [
     {
-      name: 'Portfolio Website',
-      description: 'A personal portfolio website showcasing my skills, projects, and experiences.',
+      name: 'Website',
+      description: 'A personal website showcasing my skills, projects, and experiences.',
       link: 'https://github.com/KoRIOz675/thomas.mafille.net',
       image: '/projects/portfolio.svg',
       technologies: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-      dates: 'February 2024 - Present',
+      dates: 'February 2024',
     },
     {
       name: 'Atlas of Worlds',
@@ -16,7 +16,7 @@ function Project() {
       link: 'https://github.com/Night-Breeze-Inn/Atlas-of-Worlds',
       image: '/projects/atlasOfWorlds.png',
       technologies: ['React.js', 'Node.js', 'Neo4j', 'Vite', 'TypeScript', 'Express.js', 'JWT', 'Tailwind CSS'],
-      dates: 'May 2025 - Present',
+      dates: 'May 2025',
     },
     {
       name: 'NightBreeze Inn',
@@ -24,7 +24,7 @@ function Project() {
       link: 'https://night-breeze-inn.github.io',
       image: '/projects/logoNBI.png',
       technologies: ['React.js', 'Vite', 'Tailwind CSS', 'TypeScript'],
-      dates: 'May 2025 - Present',
+      dates: 'May 2025',
       github: false,
     },
     {
@@ -33,7 +33,7 @@ function Project() {
       link: 'https://github.com/Night-Breeze-Inn/Draconae-Project',
       image: '/projects/draconaeProject.svg',
       technologies: ['Java', 'JavaFX', 'Maven'],
-      dates: 'May 2025 - Present',
+      dates: 'May 2025',
     },
     {
       name: 'CBSM.eu',
@@ -41,7 +41,7 @@ function Project() {
       link: 'https://cbsm.eu',
       image: '/projects/cbsm.png',
       technologies: ['HTML5', 'JavaScript', 'CSS3'],
-      dates: 'May 2024 - Present',
+      dates: 'May 2024',
       github: false,
     },
     {
@@ -50,7 +50,7 @@ function Project() {
       link: 'https://github.com/KoRIOz675/tache-colaborative',
       image: '/projects/nekoTaskManager.png',
       technologies: ['Java', 'JavaFX', 'MySQL'],
-      dates: 'October 2024 - December 2024',
+      dates: 'October 2024 to December 2024',
     },
   ];
 

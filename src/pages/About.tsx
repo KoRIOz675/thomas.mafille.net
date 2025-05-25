@@ -16,6 +16,17 @@ function About() {
   });
   const baseTransitionClasses = 'transition-all duration-700 ease-out';
   const initialClasses = 'opacity-0 translate-y-5';
+  const skills = [
+    'Frontend Technologies',
+    'Backend Technologies',
+    'Web Development',
+    'Software Development',
+    'Database Management',
+    'Version Control',
+    'Agile Methodologies',
+    'UI/UX Design Principles',
+    'Problem Solving and Critical Thinking',
+  ];
 
   return (
     <div className="mx-auto flex h-full max-w-full flex-col items-center justify-center p-4">
@@ -45,7 +56,7 @@ function About() {
             >
               Isep
             </a>{' '}
-            in Paris, France, specializing in software and web engineering.
+            in Paris, France, specializing in software and web development.
           </p>
           <p
             ref={p2Ref}
@@ -59,19 +70,7 @@ function About() {
         </div>
         <div className="mb-2 rounded-lg border-2 border-gray-300 p-4 text-lg shadow-lg md:col-span-1">
           <h2 className="mb-2 text-xl font-semibold">Skills and interests</h2>
-          <AboutProps
-            skills={[
-              'Frontend Technologies',
-              'Backend Technologies',
-              'Web Development',
-              'Software Development',
-              'Database Management',
-              'Version Control',
-              'Agile Methodologies',
-              'UI/UX Design Principles',
-              'Problem Solving and Critical Thinking',
-            ]}
-          />
+          <AboutProps skills={skills} />
         </div>
       </div>
     </div>
