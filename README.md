@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# Thomas Mafille - Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for my personal website, designed to showcase my skills, projects, and professional journey as a software and web development student. The website is built with modern web technologies to provide a dynamic, responsive, and engaging user experience.
 
-Currently, two official plugins are available:
+**Live Demo:** [thomas.mafille.net](https://thomas.mafille.net)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Responsive Design:** Adapts to various screen sizes for optimal viewing on desktop, tablet, and mobile devices.
+- **Interactive Sections:**
+  - **Home:** An engaging landing page with animated background.
+  - **About Me:** Introduction and a summary of my key skills and interests.
+  - **Tech Stack:** A dynamic display of technologies and software I'm proficient in, featuring marquee animations.
+  - **Projects:** A gallery of my projects with descriptions, technologies used, and links.
+  - **Experience:** A timeline of my academic and professional background, including club involvements.
+- **Smooth Animations:** Subtle animations on scroll and hover to enhance user experience.
+- **Direct Links:** Easy access to my Resume, GitHub profile, and LinkedIn profile.
+- **Contact Information:** Quick link to contact me via email.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+This project is built using the following technologies:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend:**
+  - React 19
+  - TypeScript
+- **Build Tool:**
+  - Vite
+- **Styling:**
+  - Tailwind CSS
+  - Custom CSS for animations and specific styles
+- **Icons:**
+  - FontAwesome
+- **Linting & Formatting:**
+  - ESLint
+  - Prettier (with `prettier-plugin-tailwindcss` for class sorting)
+- **Version Control:**
+  - Git & GitHub
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+## 🎨 Styling
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+- **Tailwind CSS:** Utilized for a utility-first CSS workflow, enabling rapid UI development.
+- **Custom CSS:** Global styles, custom animations (like marquees, pop-ins, gradient movements), and section dividers are defined in src/index.css.
+- **Prettier:** The prettier-plugin-tailwindcss is used to automatically sort Tailwind classes, ensuring consistency.
+
+## 📞 Contact
+
+Thomas MAFILLE
+
+- **Email:** [thomas@mafille.net](mailto:thomas@mafille.net)
+- **LinkedIn:** [linkedin.com/in/thomasmafille](https://www.linkedin.com/in/thomasmafille/)
+- **GitHub:** [github.com/KoRIOz675](https://github.com/KoRIOz675)

@@ -30,6 +30,17 @@
   clip-path: polygon(0 0, 100% 100%, 100% 0);
 }
 
+@media screen and (max-width: 640px) {
+  .home-section-divider::after {
+    height: 0px;
+  }
+  
+  .experience-section-divider::before {
+    height: 0px;
+  }
+  
+}
+
 @layer utilities {
   @keyframes move-left {
     0% {

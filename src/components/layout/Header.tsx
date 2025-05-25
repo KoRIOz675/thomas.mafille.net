@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 flex max-h-32 flex-col items-center bg-gray-300 p-4 text-black transition-shadow duration-300 ease-in-out md:max-h-16 md:flex-row md:justify-between md:px-8 md:py-2 ${
+      className={`sticky top-0 z-50 flex max-h-32 flex-col items-center bg-slate-300 p-4 text-black transition-shadow duration-300 ease-in-out md:max-h-16 md:flex-row md:justify-between md:px-8 md:py-2 ${
         scrolled ? 'shadow-lg shadow-gray-400' : ''
       }`}
     >

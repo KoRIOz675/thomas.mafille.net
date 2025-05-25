@@ -56,7 +56,8 @@ function About() {
             >
               Isep
             </a>{' '}
-            in Paris, France, specializing in software and web development.
+            in Paris, France, specializing in software and web development. I am mostly focused on frontend development,
+            but I also have a solid understanding of backend technologies and software architecture.
           </p>
           <p
             ref={p2Ref}
