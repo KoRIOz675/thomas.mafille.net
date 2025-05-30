@@ -1,5 +1,8 @@
 # Thomas Mafille - Personal Website
 
+> [!NOTE]
+> The current live demo is not updated because of a maintenance on the web hosting services.
+
 This repository contains the source code for my personal website, designed to showcase my skills, projects, and professional journey as a software and web development student. The website is built with modern web technologies to provide a dynamic, responsive, and engaging user experience.
 
 **Live Demo:** [thomas.mafille.net](https://thomas.mafille.net)
