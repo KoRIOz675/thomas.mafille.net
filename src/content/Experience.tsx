@@ -5,7 +5,7 @@ function Experience() {
     {
       image: '/experiences/ludisep.svg',
       group: 'LudIsep',
-      role: 'President',
+      role: 'President of club',
       startDate: 'September 2024',
       endDate: 'July 2025',
       description:
