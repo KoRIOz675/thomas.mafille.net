@@ -3,8 +3,8 @@ import Projects from '../components/Projects';
 function Project() {
   const projectData = [
     {
-      name: 'Website',
-      description: 'A personal website showcasing my skills, projects, and experiences.',
+      name: 'Personal Website',
+      description: 'My personal website showcasing my skills, projects, and experiences. You are currently viewing it!',
       link: 'https://github.com/KoRIOz675/thomas.mafille.net',
       image: '/projects/portfolio.svg',
       technologies: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS'],

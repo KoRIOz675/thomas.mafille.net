@@ -36,7 +36,7 @@ const Projects: React.FC<ProjectsProps> = ({
   return (
     <div
       ref={cardRef}
-      className={`flex h-120 flex-col items-center justify-start rounded-lg border-2 border-gray-300 p-4 shadow-lg ${baseTransitionClasses} ${isCardInView ? visibleClasses : initialClasses}`}
+      className={`flex min-h-120 flex-col items-center justify-start rounded-lg border-2 border-gray-300 p-4 shadow-lg ${baseTransitionClasses} ${isCardInView ? visibleClasses : initialClasses}`}
       style={{
         transitionDelay: `${index * 100}ms`,
       }}
