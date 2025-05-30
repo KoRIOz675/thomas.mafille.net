@@ -26,7 +26,7 @@ function Header() {
       }`}
     >
       <img src="/logo/logo.svg" alt="Logo" className="mr-2 inline-block h-10 w-10 rounded-full" />
-      <nav className="mt-4 mb-2 flex w-full justify-center md:mt-2 md:w-auto">
+      <nav className="mb-2 mt-4 flex w-full justify-center md:mt-2 md:w-auto">
         <ul className="flex space-x-4">
           <li>
             <a
@@ -51,13 +51,9 @@ function Header() {
               href="https://github.com/KoRIOz675/thomas.mafille.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center"
+              className="rounded-2xl border-2 border-dotted border-green-950 px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-green-950 hover:text-white"
             >
-              <img
-                src="/trademarks/github-mark.svg"
-                alt="GitHub Logo"
-                className="h-6 transition-opacity duration-200 hover:opacity-80"
-              />
+              Source Code
             </a>
           </li>
         </ul>
