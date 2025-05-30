@@ -76,15 +76,15 @@ function Experience() {
     },
   ];
   return (
-    <div className="experience-section-divider relative mx-auto mt-5 flex h-full max-w-full flex-col items-center justify-center bg-gray-100 p-4">
+    <div className="experience-section-divider relative mx-auto mt-5 flex h-fit max-w-full flex-col items-center justify-center bg-gray-100 p-4 pt-20">
       <h1 className="mt-15 mb-4 text-2xl font-bold">Experiences</h1>
-      <h2 className="mt-4 mb-4 text-xl">Clubs</h2>
+      <h2 className="mb-4 mt-4 text-xl">Clubs</h2>
       <div className="grid h-full max-w-5xl grid-cols-1 gap-4 p-4 md:grid-cols-3">
         {clubs.map((experience, index) => (
           <Experiences key={index} experiences={[experience]} />
         ))}
       </div>
-      <h2 className="mt-4 mb-4 text-xl">Background</h2>
+      <h2 className="mb-4 mt-4 text-xl">Background</h2>
       <div className="grid h-full max-w-5xl grid-cols-1 gap-4 p-4 md:grid-cols-3">
         {background.map((experience, index) => (
           <Experiences key={index} experiences={[experience]} />

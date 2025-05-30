@@ -63,10 +63,10 @@ function Tech() {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 bottom-30 left-370 z-10 hidden h-16 rotate-z-15 text-gray-500 md:block">
+      <div className="absolute bottom-32 right-60 z-10 hidden h-16 rotate-45 text-gray-500 md:block">
         Hover with your <br /> mouse to slow down!
       </div>
-      <div className="absolute right-0 -bottom-10 left-350 z-10 hidden h-16 rotate-45 text-5xl text-gray-500 md:block">
+      <div className="absolute bottom-20 right-80 z-10 hidden h-16 rotate-45 text-5xl text-gray-500 md:block">
         &#10534;
       </div>
     </div>

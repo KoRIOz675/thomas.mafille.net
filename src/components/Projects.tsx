@@ -1,27 +1,33 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import useInView from '../hooks/useInView';
+import { Link } from 'react-router-dom';
 
 interface ProjectsProps {
+  slug: string;
   name: string;
   description: string;
-  link: string;
+  internalPageLink: string;
   image: string;
   technologies: string[];
   dates: string;
-  github?: boolean;
+  githubLink?: string;
+  showGitHubLinkOnCard?: boolean;
   index?: number;
 }
 
 const Projects: React.FC<ProjectsProps> = ({
   name,
   description,
-  link,
+  internalPageLink,
   image,
   technologies,
   dates,
-  github = true,
+  githubLink,
+  showGitHubLinkOnCard = true,
   index = 0,
 }) => {
   const [cardRef, isCardInView] = useInView<HTMLDivElement>({
@@ -31,7 +37,8 @@ const Projects: React.FC<ProjectsProps> = ({
   const baseTransitionClasses = 'transition-all duration-500 ease-out';
   const initialClasses = 'opacity-0 translate-y-4 scale-95';
   const visibleClasses = 'opacity-100 translate-y-0 scale-100';
-  const upRightIcon = <FontAwesomeIcon icon={faUpRightFromSquare} />;
+  const chevronRightIcon = <FontAwesomeIcon icon={faChevronRight} />;
+  const githubIcon = <FontAwesomeIcon icon={faGithub} />;
 
   return (
     <div
@@ -52,18 +59,29 @@ const Projects: React.FC<ProjectsProps> = ({
       <div className="mb-2 text-sm text-gray-500">
         <span className="font-semibold">Dates:</span> {dates}
       </div>
-      <div className="mt-4 text-center text-blue-600">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group inline-flex items-center hover:underline"
+      <div className="mt-auto w-full pt-4 text-center">
+        {' '}
+        <Link
+          to={internalPageLink}
+          className="group mb-2 inline-flex w-full items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
         >
-          {github ? 'View Project on github.' : 'View Project.'}
-          <span className="ml-1 inline-block transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1">
-            {upRightIcon}
+          View Details
+          <span className="ml-2 inline-block transition-transform duration-200 ease-in-out group-hover:translate-x-1">
+            {chevronRightIcon}
           </span>
-        </a>
+        </Link>
+        {showGitHubLinkOnCard && githubLink && (
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-2 inline-flex w-full items-center justify-center rounded-md border border-gray-700 px-4 py-2 text-gray-700 transition-colors hover:bg-gray-100"
+          >
+            <span className="mr-2">{githubIcon}</span>
+            View on GitHub
+            <FontAwesomeIcon icon={faUpRightFromSquare} className="ml-2 opacity-70 group-hover:opacity-100" size="xs" />
+          </a>
+        )}
       </div>
     </div>
   );

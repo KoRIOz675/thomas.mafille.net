@@ -5,8 +5,9 @@ export default {
     extend: {
       height: {
         150: '37.5rem',
+        100: '25rem',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
