@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,7 +48,7 @@ function Header() {
               Resume
             </a>
           </li>
-          <li>
+          <li className="hidden md:block">
             <a
               href="https://github.com/KoRIOz675/thomas.mafille.net"
               target="_blank"
@@ -54,6 +56,16 @@ function Header() {
               className="rounded-2xl border-2 border-dotted border-green-950 px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-green-950 hover:text-white"
             >
               Source Code
+            </a>
+          </li>
+          <li className="block md:hidden">
+            <a
+              href="https://github.com/KoRIOz675/thomas.mafille.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border-2 border-dotted border-green-950 px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-yellow-950 hover:text-white"
+            >
+              <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
         </ul>
