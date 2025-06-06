@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       {' '}
       <Header />
-      <main className="mx-auto">
+      <main className="mx-auto bg-white">
         {' '}
         <App />
       </main>

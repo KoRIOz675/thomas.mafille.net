@@ -43,16 +43,16 @@ const Projects: React.FC<ProjectsProps> = ({
   return (
     <div
       ref={cardRef}
-      className={`flex min-h-120 flex-col items-center justify-start rounded-lg border-2 border-gray-300 p-4 shadow-lg ${baseTransitionClasses} ${isCardInView ? visibleClasses : initialClasses}`}
+      className={`min-h-120 flex flex-col items-center justify-start rounded-lg border-2 border-gray-300 p-4 shadow-lg ${baseTransitionClasses} ${isCardInView ? visibleClasses : initialClasses}`}
       style={{
         transitionDelay: `${index * 100}ms`,
       }}
     >
       <img src={image} alt={name} className="mb-4 h-28 w-28 rounded-lg object-contain shadow-lg" loading="lazy" />
-      <h1 className="mt-4 mb-4 text-center text-4xl font-bold">{name}</h1>
-      <hr className="mt-2 mb-2 w-full border-gray-300" />
+      <h1 className="mb-4 mt-4 text-center text-4xl font-bold">{name}</h1>
+      <hr className="mb-2 mt-2 w-full border-gray-300" />
       <p className="text-center text-lg text-gray-600">{description}</p>
-      <hr className="mt-2 mb-2 w-full border-gray-300" />
+      <hr className="mb-2 mt-2 w-full border-gray-300" />
       <div className="mb-2 text-center text-sm text-gray-500">
         <span className="font-semibold">Technologies:</span> {technologies.join(', ')}
       </div>

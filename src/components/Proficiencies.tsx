@@ -62,13 +62,12 @@ const Proficiencies: React.FC<ProficienciesProps> = ({ skills, classAnimation, s
   }, [classAnimation, slowAnimationValue]);
 
   return (
-    <div className="w-full max-w-5xl overflow-hidden py-2">
+    <div className="w-full max-w-5xl overflow-hidden">
       {' '}
-      {/* Viewport */}
       <div ref={animatedDivRef} className={`${classAnimation} [will-change:transform]`}>
         <div className="flex flex-nowrap">
           {extendedSkills.map((skill, index) => (
-            <p key={index} className="flex-shrink-0 px-4 py-1 text-lg whitespace-nowrap text-gray-700">
+            <p key={index} className="flex-shrink-0 whitespace-nowrap px-4 text-lg text-gray-700">
               {skill}
             </p>
           ))}

@@ -47,7 +47,7 @@ function About() {
               isP1InView ? 'translate-y-0 opacity-100' : initialClasses
             }`}
           >
-            I am Master's student at{' '}
+            I am a Master's student at{' '}
             <a
               href="https://www.isep.fr/"
               target="_blank"

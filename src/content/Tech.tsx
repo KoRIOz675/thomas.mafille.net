@@ -10,7 +10,6 @@ function Tech() {
     'Node.js',
     'HTML',
     'CSS',
-    'JavaScript',
     'Tailwind CSS',
     'Spring Boot',
     'Java',
@@ -22,6 +21,10 @@ function Tech() {
     'PyGame',
     'JavaFX',
     'Maven',
+    'Vite',
+    'Prettier',
+    'ESLint',
+    'JWT',
   ];
   const softwares = [
     'Git',
@@ -55,19 +58,13 @@ function Tech() {
               are some of the key technologies I work with:
             </p>
           </div>
-          <div className="mb-2p-4 text-lg">
+          <div className="mb-2 p-4 text-lg">
             <Proficiencies skills={skills} classAnimation="animate-marquee-move-left" />
-            <div className="mb-2 p-4 text-lg">
+            <div className="mb-2 mt-4 p-4 text-lg">
               <Proficiencies skills={softwares} classAnimation="animate-marquee-move-right" />
             </div>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-32 right-60 z-10 hidden h-16 rotate-45 text-gray-500 md:block">
-        Hover with your <br /> mouse to slow down!
-      </div>
-      <div className="absolute bottom-20 right-80 z-10 hidden h-16 rotate-45 text-5xl text-gray-500 md:block">
-        &#10534;
       </div>
     </div>
   );
