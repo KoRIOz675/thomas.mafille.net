@@ -1,52 +1,34 @@
+import { useState, useEffect } from 'react';
 import Proficiencies from '../components/Proficiencies';
 import WavyBackground from '../components/WavyBackground';
+import { client } from '../sanityClient';
+
+interface TechDataType {
+  skills: string[];
+  software: string[];
+}
 
 function Tech() {
-  const skills = [
-    'React.js',
-    'Next.js',
-    'TypeScript',
-    'JavaScript',
-    'Node.js',
-    'HTML',
-    'CSS',
-    'Tailwind CSS',
-    'Spring Boot',
-    'Java',
-    'Python',
-    'PostgreSQL',
-    'MySQL',
-    'Neo4j',
-    'Markdown',
-    'PyGame',
-    'JavaFX',
-    'Maven',
-    'Vite',
-    'Prettier',
-    'ESLint',
-    'JWT',
-  ];
-  const softwares = [
-    'Git',
-    'GitHub',
-    'GitLab',
-    'Docker',
-    'InteliJ IDEA',
-    'Visual Studio Code',
-    'Figma',
-    'Postman',
-    'Adobe Illustrator',
-    'Adobe Photoshop',
-    'Aseprite',
-    'Canva',
-    'Microsoft Office',
-    'Google Workspace',
-    'Slack',
-  ];
+  const [techData, setTechData] = useState<TechDataType>({ skills: [], software: [] });
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const query = `*[_type == "tech" && _id == "tech"][0]`;
+
+    const fetchTech = async () => {
+      const data = await client.fetch<TechDataType>(query);
+      if (data) {
+        setTechData(data);
+      }
+      setIsLoading(false);
+    };
+
+    fetchTech().catch(console.error);
+  }, []);
+
   return (
     <div className="relative mx-auto flex h-full max-w-full flex-col items-center justify-center overflow-hidden p-4">
       <div className="absolute inset-0 z-0">
-        {' '}
         <WavyBackground />
       </div>
       <div className="z-10 mx-auto flex h-full max-w-full flex-col items-center justify-center p-4">
@@ -58,12 +40,16 @@ function Tech() {
               are some of the key technologies I work with:
             </p>
           </div>
-          <div className="mb-2 p-4 text-lg">
-            <Proficiencies skills={skills} classAnimation="animate-marquee-move-left" />
-            <div className="mb-2 mt-4 p-4 text-lg">
-              <Proficiencies skills={softwares} classAnimation="animate-marquee-move-right" />
+          {isLoading ? (
+            <p className="text-center">Loading tech stack...</p>
+          ) : (
+            <div className="mb-2 p-4 text-lg">
+              <Proficiencies skills={techData.skills} classAnimation="animate-marquee-move-left" />
+              <div className="mb-2 mt-4 p-4 text-lg">
+                <Proficiencies skills={techData.software} classAnimation="animate-marquee-move-right" />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>

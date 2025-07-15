@@ -5,13 +5,15 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import useInView from '../hooks/useInView';
 import { Link } from 'react-router-dom';
+import { urlFor } from '../sanityClient';
+import type { Image } from 'sanity';
 
 interface ProjectsProps {
   slug: string;
   name: string;
   description: string;
   internalPageLink: string;
-  image: string;
+  image: Image;
   technologies: string[];
   dates: string;
   githubLink?: string;
@@ -48,7 +50,18 @@ const Projects: React.FC<ProjectsProps> = ({
         transitionDelay: `${index * 100}ms`,
       }}
     >
-      <img src={image} alt={name} className="mb-4 h-28 w-28 rounded-lg object-contain shadow-lg" loading="lazy" />
+      {image ? (
+        <img
+          src={urlFor(image).width(200).url()}
+          alt={name}
+          className="mb-4 h-28 w-28 rounded-lg object-contain shadow-lg"
+          loading="lazy"
+        />
+      ) : (
+        <div className="mb-4 flex h-28 w-28 items-center justify-center rounded-lg bg-gray-200 shadow-lg">
+          <span className="text-xs text-gray-500">No Image</span>
+        </div>
+      )}
       <h1 className="mb-4 mt-4 text-center text-4xl font-bold">{name}</h1>
       <hr className="mb-2 mt-2 w-full border-gray-300" />
       <p className="text-center text-lg text-gray-600">{description}</p>
