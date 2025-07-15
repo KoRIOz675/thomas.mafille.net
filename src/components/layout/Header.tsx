@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { useSettings } from '../../context/SettingsContext';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const { resumeUrl } = useSettings();
+
+  const resumeButtonClasses =
+    'rounded-2xl border-2 border-dotted border-red-950 px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-red-950 hover:text-white';
+  const disabledClasses = 'opacity-50 cursor-not-allowed hover:bg-transparent hover:text-black';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,10 +46,11 @@ function Header() {
           </li>
           <li>
             <a
-              href="/documents/Mafille-Thomas-Resume.pdf"
+              href={resumeUrl || '#'}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-2xl border-2 border-dotted border-red-950 px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-red-950 hover:text-white"
+              className={`${resumeButtonClasses} ${!resumeUrl ? disabledClasses : ''}`}
+              onClick={(e) => !resumeUrl && e.preventDefault()}
             >
               Resume
             </a>
