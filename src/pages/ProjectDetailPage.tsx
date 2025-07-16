@@ -50,7 +50,7 @@ const ProjectDetailPage: React.FC = () => {
   if (error || !project) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center p-4 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-red-600">Project Not Found</h1>
+        <h2 className="mb-4 text-4xl font-bold text-red-600">Project Not Found</h2>
         <p className="mb-8 text-lg text-gray-700">
           The project you are looking for does not exist or the link is incorrect.
         </p>
@@ -77,7 +77,7 @@ const ProjectDetailPage: React.FC = () => {
           alt={`${project.name} showcase`}
           className="mx-auto mb-6 h-48 w-48 rounded-lg object-contain shadow-md md:h-64 md:w-64"
         />
-        <h1 className="mb-4 text-center text-3xl font-bold text-gray-800 md:text-4xl">{project.name}</h1>
+        <h2 className="mb-4 text-center text-3xl font-bold text-gray-800 md:text-4xl">{project.name}</h2>
 
         <div className="mb-6 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600">
           <div className="flex items-center">

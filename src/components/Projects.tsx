@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -99,4 +99,4 @@ const Projects: React.FC<ProjectsProps> = ({
     </div>
   );
 };
-export default Projects;
+export default memo(Projects);

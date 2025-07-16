@@ -51,6 +51,7 @@ function Header() {
               rel="noopener noreferrer"
               className={`${resumeButtonClasses} ${!resumeUrl ? disabledClasses : ''}`}
               onClick={(e) => !resumeUrl && e.preventDefault()}
+              aria-disabled={!resumeUrl}
             >
               Resume
             </a>

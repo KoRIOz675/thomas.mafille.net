@@ -56,7 +56,7 @@ function Experience() {
   if (isLoading) {
     return (
       <div className="experience-section-divider relative mx-auto mt-5 flex h-fit max-w-full flex-col items-center justify-center bg-gray-100 p-4 pt-20">
-        <h1 className="mt-15 mb-4 text-2xl font-bold">Experiences</h1>
+        <h2 className="mt-15 mb-4 text-2xl font-bold">Experiences</h2>
         <p>Loading experiences...</p>
       </div>
     );
@@ -64,7 +64,7 @@ function Experience() {
 
   return (
     <div className="experience-section-divider relative mx-auto mt-5 flex h-fit max-w-full flex-col items-center justify-center bg-gray-100 p-4 pt-20">
-      <h1 className="mt-15 mb-4 text-2xl font-bold">Experiences</h1>
+      <h2 className="mt-15 mb-4 text-2xl font-bold">Experiences</h2>
 
       {clubs.length > 0 && (
         <>

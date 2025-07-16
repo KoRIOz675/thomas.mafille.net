@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import useInView from '../hooks/useInView';
@@ -29,7 +30,7 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
         <div
           key={index}
           ref={cardRef}
-          className={`flex h-70 flex-col items-center justify-start rounded-lg border-2 border-gray-300 p-4 text-center shadow-lg ${baseTransitionClasses} ${isCardInView ? visibleClasses : initialClasses}`}
+          className={`h-70 flex flex-col items-center justify-start rounded-lg border-2 border-gray-300 p-4 text-center shadow-lg ${baseTransitionClasses} ${isCardInView ? visibleClasses : initialClasses}`}
           style={{
             transitionDelay: `${index * 100}ms`,
           }}
@@ -49,7 +50,7 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
               className="group mt-2 inline-flex items-center text-blue-600 hover:underline"
             >
               Learn More
-              <span className="ml-1 inline-block transition-transform duration-200 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1">
+              <span className="ml-1 inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-1">
                 {upRightIcon}
               </span>
             </a>
@@ -59,4 +60,4 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
     </>
   );
 };
-export default Experiences;
+export default memo(Experiences);

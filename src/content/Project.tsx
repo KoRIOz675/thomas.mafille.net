@@ -42,7 +42,7 @@ function ProjectListPage() {
   if (isLoading) {
     return (
       <div className="mx-auto flex h-full max-w-full flex-col items-center justify-center p-4">
-        <h1 className="mb-4 text-2xl font-bold">My Projects</h1>
+        <h2 className="mb-4 text-2xl font-bold">My Projects</h2>
         <p>Loading projects...</p>
       </div>
     );
@@ -51,7 +51,7 @@ function ProjectListPage() {
   if (error) {
     return (
       <div className="mx-auto flex h-full max-w-full flex-col items-center justify-center p-4">
-        <h1 className="mb-4 text-2xl font-bold">My Projects</h1>
+        <h2 className="mb-4 text-2xl font-bold">My Projects</h2>
         <p className="text-red-500">{error}</p>
       </div>
     );
@@ -59,7 +59,7 @@ function ProjectListPage() {
 
   return (
     <div className="mx-auto flex h-full max-w-full flex-col items-center justify-center p-4">
-      <h1 className="mb-4 text-2xl font-bold">My Projects</h1>
+      <h2 className="mb-4 text-2xl font-bold">My Projects</h2>
       <div className="mb-4 grid h-full max-w-5xl grid-cols-1 gap-4 md:grid-cols-3">
         {projects.map((project, idx) => (
           <Projects

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useInView from '../hooks/useInView';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,7 +9,7 @@ interface SkillItemProps {
   index: number;
 }
 
-const SkillItem: React.FC<SkillItemProps> = ({ skill, index }) => {
+const SkillItem: React.FC<SkillItemProps> = memo(({ skill, index }) => {
   const [itemRef, isItemInView] = useInView<HTMLLIElement>({
     triggerOnce: true,
     threshold: 0.1,
@@ -45,7 +45,7 @@ const SkillItem: React.FC<SkillItemProps> = ({ skill, index }) => {
       </span>
     </li>
   );
-};
+});
 
 interface AboutProps {
   skills: string[];
